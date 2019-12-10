@@ -11,30 +11,50 @@
 	</script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
 		integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/db76e9af61.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/db76e9af61.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 	<nav class="navbar navbar-light bg-light navbar-expand-sm ">
 		<a href="#" class="navbar-brand">Whiskey Drop</a>
-		<ul class="navbar-nav mr-auto">
-			<li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
-			<li class="nav-item mr-2"><a class="nav-link" href="/about">About</a></li>
-			<li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="/login">Sign In / Sign Up</a></li>
-		</ul>
-		<div class="d-none d-md-block">
-			<p class="navbar-text my-auto mr-2">Great whiskey delievered to your door!</p>
-			<a href="/login">Sign In / Sign Up</a>
-		</div>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+		<div class="collapse navbar-collapse" id="navbarNavDropDown">
+			<ul class="navbar-nav mr-auto">
+				<li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
+				<li class="nav-item mr-2"><a class="nav-link" href="/about">About</a></li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Whiskeys
+					</a>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+						<a class="dropdown-item" href="#">Irish</a>
+						<a class="dropdown-item" href="#">Scotch</a>
+						<a class="dropdown-item" href="#">Japanese</a>
+						<a class="dropdown-item" href="#">American</a>
+					</div>
+
+
+				<li>
+				<li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="/login">Sign In / Sign Up</a></li>
+			</ul>
+			<div>
+				<div class="d-none d-md-block">
+					<p class="navbar-text my-auto mr-2">Great whiskey delievered to your door!</p>
+					<a href="/login">Sign In / Sign Up</a>
+				</div>
 	</nav>
 	<article class="container mt-3">
 		<!-- Callout -->
 		<div class="row d-none d-sm-block">
-        <div class="col-12">
-            <div class="alert alert-warning">
-            <strong>Sale Now On!</strong>We have got a sale on. Get a 12-month subsrcription for the price of 6!.<a href="#">See here for details</a>
-            </div>
-            </div>
+			<div class="col-12">
+				<div class="alert alert-warning">
+					<strong>Sale Now On!</strong>We have got a sale on. Get a 12-month subsrcription for the price of
+					6!.<a href="#">See here for details</a>
+				</div>
+			</div>
 			<div class="col-12 ">
 				<section class="callout jumbotron text-center">
 					<h1>The finest whiskeys delivered to your doorstep.</h1>
@@ -42,7 +62,7 @@
 						<s class="d-none d-sm-inline">$19.99</s>
 						<span class="d-inline d-sm-none"><br></span>
 						<strong><mark>First on is free!</mark></strong></p>
-					<button class="btn btn-success btn-lg">Sign Up!</button>
+					<button class="btn btn-success btn-lg" data-toggle="modal" data-target="#signupModal">Sign Up!</button>
 					<p class="small-muted">
 						<small>You must be over 18 to sign up to our sevice. Please drink responsibly.</small></p>
 				</section>
@@ -101,7 +121,8 @@
 			<div class="row">
 				<div class="col-12 col-md-6 col-lg-4">
 					<div class="feature">
-						<h3><i class="fas fa-gifts d-none d-sm-block"></i>Feature 1<span class="badge badge-success">NEW!</span></h3>
+						<h3><i class="fas fa-gifts d-none d-sm-block"></i>Feature
+							1<span class="badge badge-success">NEW!</span></h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
 							laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -130,6 +151,48 @@
 		</section>
 		<!-- /.features -->
 	</article>
+	<div class="modal" tabindex="-1" role="dialog" id="signupModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Sign Up to Whiskey Drop</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Email address</label>
+							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
+							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+							<label for="repeatPassword">Repeat Password </label>
+							<input type="password" class="form-control" id=repeatPassword" placeholder="Password">
+  </div>
+							
+							<button type="submit" class="btn btn-success">Submit</button>
+					</form>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
 
 </body>
 
